@@ -57,6 +57,11 @@ export const putCategoriaService = async(id,data)=>{
             updatecategoria[params] = data[params]
         }
         const updateCategory = await categoriaFound.save(updatecategoria)
+        //retornar como un objeto.
+        /* 
+        mensaje: "Actualizado",
+        data: data,
+        */
         return ("conseguio y actualizado",data)
 
     }else{

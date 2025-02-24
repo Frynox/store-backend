@@ -18,6 +18,7 @@ const Port = 3000;
 app.use(express.json());
 
 app.listen(Port,()=>{
+    // Hacer un trycatch por si la conexión da error
     console.log('they are listening on ', Port);
     sequelize.authenticate()
     sequelize.sync()
