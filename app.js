@@ -5,6 +5,7 @@ import routerProducto from './src/routes/t_productosRoutes.js'
 import routerOrden from './src/routes/t_ordenRoutes.js'
 import routerCategoria from './src/routes/t_categoriaRoutes.js'
 import routerOrdenDEtalle from './src/routes/t_orden_detalleRoute.js'
+import routerUtilsProductByCategory from './src/routes/utilsProductosCategoria.js'
 import './src/models/T_usuario.js'
 import './src/models/T_producto.js'
 import './src/models/T_orden.js'
@@ -30,3 +31,4 @@ app.use(routerProducto);
 app.use(routerOrden);
 app.use(routerCategoria);
 app.use(routerOrdenDEtalle);
+app.use(routerUtilsProductByCategory);

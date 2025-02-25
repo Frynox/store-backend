@@ -18,21 +18,17 @@ export const createProducto = async (data)=>{
     }
 };
 
-export const GetAllProducto = async (filterParams)=>{
-    const allProducto = await T_producto.findAll({where: filterParams})
-     if(allProducto){
-        return{
-            status: 201,
-            allProducto
-        }
-    }else {
-        return {
-            status: 400,
-            data: null
-        }
+export const GetAllProducto = async (filter) => {
+    try {
+        return await T_producto.findAll({ 
+            where: filter,
+            attributes:["name"]
+        });
+    } catch (error) {
+        console.error("Error en GetAllProducto:", error);
+        throw error;
     }
 };
-
 export const getProductoByIdService = async (id)=>{
     const ProductoFound = await T_producto.findByPk(id);
     if(ProductoFound){
