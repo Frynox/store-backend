@@ -23,7 +23,7 @@ app.listen(Port,()=>{
     console.log('they are listening on ', Port);
     sequelize.authenticate()
     sequelize.sync()
-    console.log('seconecto la bsae de datos')
+    console.log('the data base R online 4U :D')
 });
 
 app.use(routerUsuarios);

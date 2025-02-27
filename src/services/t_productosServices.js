@@ -18,6 +18,16 @@ export const createProducto = async (data)=>{
     }
 };
 
+
+export const GetAllProductos = async (params) => {
+    try {
+        return await T_producto.findAll(params);
+    } catch (error) {
+        console.error("Error en GetAllProducto:", error);
+        throw error;
+    }
+};
+
 export const GetAllProducto = async (filter) => {
     try {
         return await T_producto.findAll({ 

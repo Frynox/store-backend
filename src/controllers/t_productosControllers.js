@@ -1,4 +1,4 @@
-import { createProducto, GetAllProducto, getProductoByIdService, putProductoService } from "../services/t_productosServices.js";
+import { createProducto, GetAllProductos, getProductoByIdService, putProductoService } from "../services/t_productosServices.js";
 
 export const postProductoController = async(req,res)=>{
     console.log(req.body,"controller")
@@ -9,7 +9,7 @@ export const postProductoController = async(req,res)=>{
 }
 export const getAllProductoController = async(req,res)=>{
     const params = req.query 
-    const respuesta = await GetAllProducto(params)
+    const respuesta = await GetAllProductos(params)
     console.log(respuesta)
     res.json({mensaje: "obtenido todos los Productos mano", respuesta})
 }
